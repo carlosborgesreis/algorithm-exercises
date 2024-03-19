@@ -1,6 +1,5 @@
-import numpy as np
-
 class LeastSquaresFitting:
+    @staticmethod
     def lsf(series: list[tuple[float, float]], round_by: int = 2) -> list[tuple[float, float]]:
         '''
         input: series (list of tuples (x, y) axis, being y the value to calculate on)
@@ -17,10 +16,10 @@ class LeastSquaresFitting:
 
         x_axis, y_axis = zip(*series)
 
-        sum_x = np.sum(x_axis)
-        sum_x2 = np.sum([x**2 for x in x_axis])
-        sum_y = np.sum(y_axis)
-        sum_xy = np.sum([x*y for x, y in series])
+        sum_x  = sum(x_axis)
+        sum_x2 = sum([x**2 for x in x_axis])
+        sum_y  = sum(y_axis)
+        sum_xy = sum([x*y for x, y in series])
 
         N = len(series)
         m = (N * sum_xy - sum_x * sum_y) / (N * sum_x2)
