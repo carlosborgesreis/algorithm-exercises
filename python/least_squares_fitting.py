@@ -7,7 +7,7 @@ class LeastSquaresFitting:
         Least Squares Fitting calculation: 
         A line equation y = mx + b
         m is the slope of the function, given by 
-            m = (N * sum(xy) - sum(x)sum(y))/(N * sum(x^2) - (sum x)^2)
+            m = (N * sum(xy) - sum(x)sum(y))/(N * sum(x^2))
         b is the intercept, given by
             b = (sum(y) - m * sum(x))/N
         N is the number of data points
